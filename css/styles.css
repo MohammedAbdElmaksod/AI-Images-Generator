@@ -1,0 +1,130 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+}
+.container .head {
+  color: #06efef;
+}
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .container .head {
+ display: none;
+  }
+}
+.images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .images {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 570px) {
+  .images {
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 10px;
+  }
+}
+.images div {
+  
+  width: 250px;
+  height: 250px;
+}
+.inputs {
+  width: 50%;
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.inputs input {
+  width: 75%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+}
+.inputs button {
+  padding: 10px;
+  width: 20%;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  min-width: fit-content;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .inputs {
+    width: 95%;
+}
+  .inputs input {
+    width: 95%;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #777;
+    
+  }
+  .inputs button {
+    width: 50%;
+    transform: translateX(-50%);
+    left: 50%;
+    position: relative;
+  }
+}
+.footer{
+  text-align: center;
+  height: 30px;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+.footer span{
+  color: red;
+}
+.loader {
+  width: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%);
+  aspect-ratio: 1.154;
+  display: grid;
+  background: conic-gradient(from 149deg at top,#0000, #BF1E62 1deg 60deg,#0000 61deg);
+  animation: l14 2s infinite cubic-bezier(0.5,500,0.5,-500);
+  transform-origin: top;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  grid-area: 1/1;
+  background: conic-gradient(from 149deg at top,#0000, #FFA588 1deg 60deg,#0000 61deg);
+  transform-origin: inherit;
+  animation: inherit;
+}
+.loader:after {
+  background: conic-gradient(from 149deg at top,#0000, #027B7F 1deg 60deg,#0000 61deg);
+  animation-timing-function: cubic-bezier(0.5,800,0.5,-800);
+}
+@keyframes l14{
+  100% {transform: rotate(0.2deg)}
+}
