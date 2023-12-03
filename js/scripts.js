@@ -2,7 +2,7 @@ const textInp = document.getElementById("randomTextInp");
 let imagenum = document.getElementById("imgNum");
 const imagesContainer = document.querySelector(".images");
 const apiUrl = "https://api.openai.com/v1/images/generations";
-const apiKey = "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";
+const apiKey = "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";
 async function GetImages() {
   imagesContainer.innerHTML =
     "<div></div><div class='loader' style='width:50px; height:50px'></div><div></div><div></div>";
